@@ -29,7 +29,16 @@ In addition to printing out the final amount, print out the amount at the end of
 
 public class App {
     public static void main(String[] args) {
-        
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the principal: ");
+        double principal = in.nextDouble();
+        System.out.print("Enter the rate of interest: ");
+        double interest = in.nextDouble();
+        System.out.print("Enter the number of years: ");
+        int years = in.nextInt();
+        double simple_interest = principal * (1 + (interest / 100) * years);
+        System.out.printf("After %d years at %.1f%%, the investment will be worth $%d.", years, interest, Math.round(simple_interest));
+
 
 
     }
